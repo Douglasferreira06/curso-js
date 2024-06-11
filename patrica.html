@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>titulo</title>
+
+
+
+    <style>
+
+        div{ text-align: center;
+            margin: auto;
+            padding: 15x;
+            background-color: blueviolet;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+            width: 200px;
+            font-size:14px;
+            border: 3px solid red;
+            border-radius: 20px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+
+        }
+    </style>
+<script>
+
+
+  
+    
+    function click (){
+    let t = document.getElementById("titulo")
+        t.addEventListener("mouseover", mudarText)
+        t.addEventListener('mouseout', alterarText)
+        t.addEventListener('click', clicarText)
+        t.style.color ="yellow"
+        
+    }
+function mudarText(){
+    this.innerHTML = ("Douglas brito ")
+}
+function alterarText(){
+    this.innerHTML= ("vanusa cú de burro")
+
+}
+
+
+function clicarText(){
+    this.innerHTML= (" jhão lindo e fofo")
+} 
+
+</script>
+
+</head>
+<body onload="click ()">
+
+<br>
+<div >
+
+    <h1 id="titulo">Clique me Mim</h1>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function click(){
+        let t = document.getElementById("titulo")
+        t.addEventListener("mouseover", alterarText)
+        t.addEventListener("mouseout",mudarText)
+        t.addEventListener("click", alteraNome)
+
+    }
+
+    function alteraNome(){
+        this.innerHTML = ( "Bom Dia" )
+    }
+
+    function mudarText(){
+        this.innerHTML = ("tudo bem ")
+    }
+
+    function alterarText(){
+        this.innerHTML = (" estou bem e voçê")
+        
+    }
+</script>
+
+
+<body onload="click()">
+    <div>
+        <h1 id="titulo"> Clique em mim</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#movingText {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 24px;
+    color: #333;
+}
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto em Movimento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="movingText">Texto em Movimento</div>
+    </div>
+    <script>
+        window.onload = function() {
+    const movingText = document.getElementById('movingText');
+    let position = 0;
+    const speed = 2; // Ajuste a velocidade do movimento aqui
+
+    function moveText() {
+        position += speed;
+        movingText.style.left = position + 'px';
+
+        // Reinicia a posição para que o texto continue em loop
+        if (position > window.innerWidth) {
+            position = -movingText.offsetWidth;
+        }
+
+        requestAnimationFrame(moveText);
+    }
+
+    moveText();
+};
+
+    </script>
+</body>
+</html>

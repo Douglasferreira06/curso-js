@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Título</h1>
+    <input onclick="mudarTexto()" type="button" value="click">
+
+    <script>
+        function mudarCorDeTexto() {
+            let h = document.getElementsByTagName("h1")[0];
+            let cores = ["red", "blue", "gray"];
+
+            cores.forEach((cor, index) => {
+                setTimeout(() => {
+                    h.style.color = cor;
+                }, (index + 1) * 1000);
+            });
+        }
+
+        function mudarTexto() {
+            let h = document.getElementsByTagName("h1")[0];
+            h.innerHTML = "Novo texto";
+            mudarCorDeTexto();
+        }
+    </script>
+</body>
+</html>

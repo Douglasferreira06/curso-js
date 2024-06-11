@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.banner {
+    width: 180px;
+    height: 60px;
+    background-color: #004aad; /* Cor de fundo do banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+    overflow: hidden; /* Para esconder o texto que sai dos limites do banner */
+    position: relative;
+}
+
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap; /* Impede quebra de linha no texto */
+    position: absolute;
+    animation: scroll 10s linear infinite; /* Animação de rolagem */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.banner-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: white; /* Cor do texto */
+    font-weight: bold;
+}

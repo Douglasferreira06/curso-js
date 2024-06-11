@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrip</title>
+
+   <!--  <script>
+        function hiclick(){
+            console.log("executando a função")
+        }
+    </script>-->
+<script>
+    function changeH1( i){
+        let h1 = document.getElementsByTagName("h1")[0]
+        h1.innerHTML = i.value 
+   
+    }
+
+    function hideH1 (){
+        let h1 = document.getElementsByTagName("h1")[0]
+    h1.style.display ="none";
+    }
+</script>
+
+<style>
+   div{
+    display: inline-block;
+    padding: 20px;
+    font-size: 2rm;
+    background-color: blue;
+     color: white;
+     
+   }
+</style>
+
+</head>
+<body>
+
+    
+   <h1> Clique em mim </h1>
+    
+
+    <!--   <h1 onclick = "this.style.color ='red' "> clique em mim </h1>-->
+    
+
+    <div onclick="hideH1()"> click</div>
+</body>
+</html>

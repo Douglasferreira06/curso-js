@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> titulo</title>
+
+    <style>
+
+        h1{
+         text-align: center;
+        }
+        h1:hover {
+            padding: 15px;
+            color: blue;
+            cursor: crosshair;
+
+        }
+    </style>
+
+        <script>
+
+            function click(){
+                let t = document.getElementById("titulo")
+            // t.onclick = mudartext;
+            t.addEventListener("mouseover", mudartext)
+            t.addEventListener("mouseout", mouseout)
+            t.addEventListener("click",alterarText)
+            t.style.backgroundColor = "red"
+        }
+          
+            function mudartext(){
+            this.innerHTML = "novo texto";
+            }
+
+
+            function alterarText(){
+                    this.innerHTML =  "texto alterdo"
+            }
+
+            function mouseout(){
+                this.innerHTML = "mouse fora do eletemento";
+            }
+        </script>
+</head>
+<body onload="click ()">
+    
+
+    <h1 id="titulo"> teste</h1>
+
+</body>
+</html>
